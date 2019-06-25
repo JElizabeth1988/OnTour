@@ -1,0 +1,4 @@
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\bin\Debug\BibliotecaClases.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\bin\Debug\BibliotecaClases.pdb
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.pdb

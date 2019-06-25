@@ -1,0 +1,36 @@
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\Vista.exe.config
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\App.g.cs
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista_MarkupCompile.cache
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista_MarkupCompile.lref
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\Vista.exe
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\Vista.pdb
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\ControlzEx.dll
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\MahApps.Metro.dll
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\System.Windows.Interactivity.dll
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\ControlzEx.pdb
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\MahApps.Metro.pdb
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\bin\Debug\MahApps.Metro.xml
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\MainWindow.g.cs
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\App.baml
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\MainWindow.baml
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.g.resources
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.Properties.Resources.resources
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.exe
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.pdb
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Login.g.cs
+c:\users\yobit\documents\visual studio 2015\Projects\OnTour\Vista\obj\Debug\Login.baml
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfAgregarCliente.g.cs
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfMantenedorCliente.g.cs
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\bin\Debug\BibliotecaClases.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\bin\Debug\Bibliotecacontrolador.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\bin\Debug\BibliotecaClases.pdb
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\bin\Debug\Bibliotecacontrolador.pdb
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfAgregarCliente.baml
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfMantenedorCliente.baml
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfModificarCliente.g.cs
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Vista\obj\Debug\wpfModificarCliente.baml
+C:\Users\yobit\Desktop\OnTour\Vista\bin\Debug\Vista.exe.config
+C:\Users\yobit\Desktop\OnTour\Vista\obj\Debug\Vista.exe
+C:\Users\yobit\Desktop\OnTour\Vista\obj\Debug\Vista.pdb

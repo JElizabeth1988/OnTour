@@ -1,0 +1,4 @@
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\bin\Debug\Bibliotecacontrolador.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\bin\Debug\Bibliotecacontrolador.pdb
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.dll
+C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.pdb
