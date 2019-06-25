@@ -2,3 +2,10 @@ C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolado
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\bin\Debug\Bibliotecacontrolador.pdb
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.dll
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.pdb
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\bin\Debug\Bibliotecacontrolador.dll
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\bin\Debug\Bibliotecacontrolador.pdb
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\bin\Debug\BibliotecaClases.dll
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\bin\Debug\BibliotecaClases.pdb
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.dll
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Bibliotecacontrolador\obj\Debug\Bibliotecacontrolador.pdb

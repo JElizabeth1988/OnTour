@@ -2,3 +2,8 @@ C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\bin
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\bin\Debug\BibliotecaClases.pdb
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.dll
 C:\Users\yobit\Documents\Visual Studio 2015\Projects\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.pdb
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\BibliotecaClases\bin\Debug\BibliotecaClases.dll
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\BibliotecaClases\bin\Debug\BibliotecaClases.pdb
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.dll
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\BibliotecaClases\obj\Debug\BibliotecaClases.pdb
