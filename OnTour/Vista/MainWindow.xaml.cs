@@ -60,7 +60,8 @@ namespace Vista
 
         private void Tile_Click_3_Click(object sender, RoutedEventArgs e)
         {
-
+            wpfMantenedorContrato con = new wpfMantenedorContrato();
+            con.Show();
         }
     }
 }

@@ -11,47 +11,44 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
 
+using BibliotecaClases;
+using Bibliotecacontrolador;
 
 namespace Vista
 {
     /// <summary>
-    /// Lógica de interacción para wpfMantenedorCliente.xaml
+    /// Lógica de interacción para wpfMantenedorContrato.xaml
     /// </summary>
-    public partial class wpfMantenedorCliente : MetroWindow
+    public partial class wpfMantenedorContrato : MetroWindow
     {
-        public wpfMantenedorCliente()
+        public wpfMantenedorContrato()
         {
             InitializeComponent();
         }
 
         private void Tile_Click_1_Click(object sender, RoutedEventArgs e)
         {
-            wpfAgregarCliente add = new wpfAgregarCliente();
-            add.Show(); 
+            wpfAgregarContrato ag = new wpfAgregarContrato();
+            ag.Show();
         }
 
         private void Tile_Click_2_Click(object sender, RoutedEventArgs e)
         {
-            wpfModificarCliente mod = new wpfModificarCliente();
-            mod.Show();
 
         }
 
         private void Tile_Click_3_Click(object sender, RoutedEventArgs e)
         {
-            wpfListarCliente lis = new wpfListarCliente();
-            lis.Show();
+
         }
 
         private void Tile_Click_4_Click(object sender, RoutedEventArgs e)
         {
-            wpfEliminarCliente eli = new wpfEliminarCliente();
-            eli.Show();
+
         }
     }
 }

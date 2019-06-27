@@ -27,99 +27,179 @@ namespace Vista
     public partial class wpfModificarCliente : MetroWindow
     {
         wpfMantenedorCliente mc = new wpfMantenedorCliente();
+        DaoCliente dao = new DaoCliente();
         public wpfModificarCliente()
         {
             InitializeComponent();
-            btnModificar.Visibility = Visibility.Hidden;
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
+            txtRut.Clear();
+            txtRut.IsEnabled = true;
+            txtApMaterno.Clear();
+            txtNombre.Clear();
+            txtApPaterno.Clear();
+            txtEmail.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtEstablecimiento.Clear();
+            cboComuna.SelectedIndex = 0;
+            cboCurso.SelectedIndex = 0;
+            cboCursoLetra.SelectedIndex = 0;
+            txtRut_alumno.Clear();
+            txtNombre_alumno.Clear();
+            rbsi.IsChecked = true;
+            rbNo.IsChecked = false;
+
+            txtRut_alumno.IsEnabled = true;
+            txtNombre_alumno.IsEnabled = true;
+
+            txtRut.Focus();//Mover el cursor a la poscición Rut
 
         }
 
-        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        private async void btnModificar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                String rut = txtRut.Text;
+                String nombre = txtNombre.Text;
+                String ApPaterno = txtApPaterno.Text;
+                String ApMaterno = txtApMaterno.Text;
+                String mail = txtEmail.Text;
+                String direccion = txtDireccion.Text;
+                String colegio = txtEstablecimiento.Text;
 
-        }
+                int telefono = 0;
+                if (int.TryParse(txtTelefono.Text, out telefono))
+                {
 
-        private void btnModificar_Click(object sender, RoutedEventArgs e)
-        {
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo valores numéricos"));
+                    txtTelefono.Focus();
+                    return;
+                }
+                Comuna comuna = (Comuna)cboComuna.SelectedItem;
+                Curso curso = (Curso)cboCurso.SelectedItem;
+                Letra letra = (Letra)cboCursoLetra.SelectedItem;
+
+                string representante;
+                if (rbsi.IsChecked == true)
+                {
+                    representante = "Si";
+                }
+                else
+                {
+                    representante = "No";
+
+                }
+
+                string rutAlum = txtRut_alumno.Text;
+                string nombreAlum = txtNombre_alumno.Text;
+                Cliente c = new Cliente()
+                {
+                    RutApoderado = rut,
+                    Nombre = nombre,
+                    ApPaternoApod = ApPaterno,
+                    ApMaternoApod = ApMaterno,
+                    Email = mail,
+                    Direccion = direccion,
+                    Telefono = telefono,
+                    _Comuna = comuna,
+                    Establecimiento = colegio,
+                    _Curso = curso,
+                    _Letra = letra,
+                    Representante = representante,
+                    RutAlumno = rutAlum,
+                    NombreAlum = nombreAlum
+
+
+                };
+                bool resp = dao.Modificar(c);
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)"));
+                /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
+
+            }
+            catch (ArgumentException exa)//mensajes de reglas de negocios
+            {
+                MessageBox.Show(exa.Message);
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Actualizar Datos"));
+                /*MessageBox.Show("Error al Actualizar");*/
+                Logger.Mensaje(ex.Message);
+
+            }
 
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void txtRut_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (txtRut.Text.Length >= 7 && txtRut.Text.Length <= 8)
+            try
             {
-                string v = new Verificar().ValidarRut(txtRut.Text);
-                txtDV.Text = v;
-                try
+                Cliente c = new DaoCliente().
+                    Buscar(txtRut.Text);
+                if (c != null)
                 {
-                    string rutSinFormato = txtRut.Text;
-
-                    //si el rut ingresado tiene "." o "," o "-" son ratirados para realizar la formula 
-                    rutSinFormato = rutSinFormato.Replace(",", "");
-                    rutSinFormato = rutSinFormato.Replace(".", "");
-                    rutSinFormato = rutSinFormato.Replace("-", "");
-                    string rutFormateado = String.Empty;
-
-                    //obtengo la parte numerica del RUT
-                    //string rutTemporal = rutSinFormato.Substring(0, rutSinFormato.Length - 1);
-                    string rutTemporal = rutSinFormato;
-                    //obtengo el Digito Verificador del RUT
-                    //string dv = rutSinFormato.Substring(rutSinFormato.Length - 1, 1);
-
-                    Int64 rut;
-
-                    //aqui convierto a un numero el RUT si ocurre un error lo deja en CERO
-                    if (!Int64.TryParse(rutTemporal, out rut))
+                    txtRut.Text = c.RutApoderado;
+                    txtNombre.Text = c.Nombre;
+                    txtApPaterno.Text = c.ApPaternoApod;
+                    txtApMaterno.Text = c.ApMaternoApod;
+                    txtEmail.Text = c.Email;
+                    txtDireccion.Text = c.Direccion;
+                    cboComuna.Text = c._Comuna.ToString();
+                    txtTelefono.Text = c.Telefono.ToString();
+                    txtEstablecimiento.Text = c.Establecimiento;
+                    cboComuna.Text = c._Comuna.ToString();
+                    cboCurso.Text = c._Curso.ToString();
+                    cboCursoLetra.Text = c._Letra.ToString();
+                    txtRut_alumno.Text = c.RutAlumno;
+                    txtNombre_alumno.Text = c.NombreAlum;
+                    if (c.Representante == "Si")
                     {
-                        rut = 0;
+                        rbsi.IsChecked = true;
+                        rbNo.IsChecked = false;
                     }
 
-                    //este comando es el que formatea con los separadores de miles
-                    rutFormateado = rut.ToString("N0");
-
-                    if (rutFormateado.Equals("0"))
+                    if (c.Representante == "No")
                     {
-                        rutFormateado = string.Empty;
+                        rbNo.IsChecked = true;
+                        rbsi.IsChecked = false;
                     }
-                    else
-                    {
-                        //si no hubo problemas con el formateo agrego el DV a la salida
-                        // rutFormateado += "-" + dv;
-
-                        //y hago este replace por si el servidor tuviese configuracion anglosajona y reemplazo las comas por puntos
-                        rutFormateado = rutFormateado.Replace(",", ".");
-                    }
-
-                    //se pasa a mayuscula si tiene letra k
-                    rutFormateado = rutFormateado.ToUpper();
-
-                    //la salida esperada para el ejemplo es 99.999.999-K
-                    txtRut.Text = rutFormateado;
-                }
-                catch (Exception)
-                {
+                    txtRut.IsEnabled = false;
 
                 }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
+                }
             }
-            else
+            catch (Exception ex)
             {
-                txtRut.Text = "";
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
+                Logger.Mensaje(ex.Message);
+
+
             }
         }
+
+        
 
     }
 }

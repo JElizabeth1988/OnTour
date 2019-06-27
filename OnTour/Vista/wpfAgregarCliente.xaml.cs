@@ -31,7 +31,6 @@ namespace Vista
         public wpfAgregarCliente()
         {
             InitializeComponent();
-            txtDV.IsEnabled = false;
 
             //llenar el combo box con los datos del enumerador
             cboComuna.ItemsSource = Enum.GetValues(typeof
@@ -48,14 +47,16 @@ namespace Vista
                 (Letra));
             this.cboCursoLetra.SelectedItem = null;
 
-            
+            cboComuna.SelectedIndex = 0;
+            cboCurso.SelectedIndex = 0;
+            cboCursoLetra.SelectedIndex = 0;
+
 
             dao = new DaoCliente();
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtDV.Clear();
             txtRut.Clear();
             txtRut.IsEnabled = true;
             txtApMaterno.Clear();
@@ -69,7 +70,6 @@ namespace Vista
             cboCurso.SelectedIndex = 0;
             cboCursoLetra.SelectedIndex = 0;
             txtRut_alumno.Clear();
-            txtDV_alumno.Clear();
             txtNombre_alumno.Clear();
             rbsi.IsChecked = true;
             rbNo.IsChecked = false;
@@ -85,7 +85,7 @@ namespace Vista
         {
             try
             {
-                String rut = txtRut.Text + "-" + txtDV.Text;
+                String rut = txtRut.Text;
                 String nombre = txtNombre.Text;
                 String ApPaterno = txtApPaterno.Text;
                 String ApMaterno = txtApMaterno.Text;
@@ -101,7 +101,7 @@ namespace Vista
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese un número de 9 dígitos"));
+                      string.Format("Ingrese sólo valores numéricos"));
                     txtTelefono.Focus();
                     return;
                 }
@@ -113,16 +113,14 @@ namespace Vista
                 if (rbsi.IsChecked == true)
                 {
                     representante = "Si";
-                                        
                 }
                 else
                 {
                     representante = "No";
-                    txtRut_alumno.IsEnabled = false;
-                    txtNombre_alumno.IsEnabled = false;
+
                 }
 
-                string rutAlum = txtRut_alumno.Text + "-" + txtDV_alumno.Text;
+                string rutAlum = txtRut_alumno.Text ;
                 string nombreAlum = txtNombre_alumno.Text;
                 Cliente c = new Cliente()
                 {
@@ -169,136 +167,61 @@ namespace Vista
             Close();
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    Buscar(txtRut.Text);
+                if (c != null)
+                {
+                    txtRut.Text = c.RutApoderado;
+                    txtNombre.Text = c.Nombre;
+                    txtApPaterno.Text = c.ApPaternoApod;
+                    txtApMaterno.Text = c.ApMaternoApod;
+                    txtEmail.Text = c.Email;
+                    txtDireccion.Text = c.Direccion;
+                    cboComuna.Text = c._Comuna.ToString();
+                    txtTelefono.Text = c.Telefono.ToString();
+                    txtEstablecimiento.Text = c.Establecimiento;
+                    cboComuna.Text = c._Comuna.ToString();
+                    cboCurso.Text =  c._Curso.ToString();
+                    cboCursoLetra.Text = c._Letra.ToString();
+                    txtRut_alumno.Text = c.RutAlumno;
+                    txtNombre_alumno.Text = c.NombreAlum;
+                    if (c.Representante== "Si")
+                    {
+                        rbsi.IsChecked = true;
+                        rbNo.IsChecked = false;
+                    }
+
+                    if (c.Representante == "No")
+                    {
+                        rbNo.IsChecked = true;
+                        rbsi.IsChecked = false;
+                    }
+                    txtRut.IsEnabled = false;
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
+                }
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
+                Logger.Mensaje(ex.Message);
+
+
+            }
 
         }
 
-        private void txtRut_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (txtRut.Text.Length >= 7 && txtRut.Text.Length <= 8)
-            {
-                string v = new Verificar().ValidarRut(txtRut.Text);
-                txtDV.Text = v;
-                try
-                {
-                    string rutSinFormato = txtRut.Text;
-
-                    //si el rut ingresado tiene "." o "," o "-" son ratirados para realizar la formula 
-                    rutSinFormato = rutSinFormato.Replace(",", "");
-                    rutSinFormato = rutSinFormato.Replace(".", "");
-                    rutSinFormato = rutSinFormato.Replace("-", "");
-                    string rutFormateado = String.Empty;
-
-                    //obtengo la parte numerica del RUT
-                    //string rutTemporal = rutSinFormato.Substring(0, rutSinFormato.Length - 1);
-                    string rutTemporal = rutSinFormato;
-                    //obtengo el Digito Verificador del RUT
-                    //string dv = rutSinFormato.Substring(rutSinFormato.Length - 1, 1);
-
-                    Int64 rut;
-
-                    //aqui convierto a un numero el RUT si ocurre un error lo deja en CERO
-                    if (!Int64.TryParse(rutTemporal, out rut))
-                    {
-                        rut = 0;
-                    }
-
-                    //este comando es el que formatea con los separadores de miles
-                    rutFormateado = rut.ToString("N0");
-
-                    if (rutFormateado.Equals("0"))
-                    {
-                        rutFormateado = string.Empty;
-                    }
-                    else
-                    {
-                        //si no hubo problemas con el formateo agrego el DV a la salida
-                        // rutFormateado += "-" + dv;
-
-                        //y hago este replace por si el servidor tuviese configuracion anglosajona y reemplazo las comas por puntos
-                        rutFormateado = rutFormateado.Replace(",", ".");
-                    }
-
-                    //se pasa a mayuscula si tiene letra k
-                    rutFormateado = rutFormateado.ToUpper();
-
-                    //la salida esperada para el ejemplo es 99.999.999-K
-                    txtRut.Text = rutFormateado;
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-            else
-            {
-                txtRut.Text = "";
-            }
-        }
-
-        private void txtRutAlumno_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (txtRut_alumno.Text.Length >= 7 && txtRut_alumno.Text.Length <= 8)
-            {
-                string v = new Verificar().ValidarRut(txtRut_alumno.Text);
-                txtDV_alumno.Text = v;
-                try
-                {
-                    string rutSinFormato = txtRut_alumno.Text;
-
-                    //si el rut ingresado tiene "." o "," o "-" son ratirados para realizar la formula 
-                    rutSinFormato = rutSinFormato.Replace(",", "");
-                    rutSinFormato = rutSinFormato.Replace(".", "");
-                    rutSinFormato = rutSinFormato.Replace("-", "");
-                    string rutFormateado = String.Empty;
-
-                    //obtengo la parte numerica del RUT
-                    //string rutTemporal = rutSinFormato.Substring(0, rutSinFormato.Length - 1);
-                    string rutTemporal = rutSinFormato;
-                    //obtengo el Digito Verificador del RUT
-                    //string dv = rutSinFormato.Substring(rutSinFormato.Length - 1, 1);
-
-                    Int64 rut;
-
-                    //aqui convierto a un numero el RUT si ocurre un error lo deja en CERO
-                    if (!Int64.TryParse(rutTemporal, out rut))
-                    {
-                        rut = 0;
-                    }
-
-                    //este comando es el que formatea con los separadores de miles
-                    rutFormateado = rut.ToString("N0");
-
-                    if (rutFormateado.Equals("0"))
-                    {
-                        rutFormateado = string.Empty;
-                    }
-                    else
-                    {
-                        //si no hubo problemas con el formateo agrego el DV a la salida
-                        // rutFormateado += "-" + dv;
-
-                        //y hago este replace por si el servidor tuviese configuracion anglosajona y reemplazo las comas por puntos
-                        rutFormateado = rutFormateado.Replace(",", ".");
-                    }
-
-                    //se pasa a mayuscula si tiene letra k
-                    rutFormateado = rutFormateado.ToUpper();
-
-                    //la salida esperada para el ejemplo es 99.999.999-K
-                    txtRut_alumno.Text = rutFormateado;
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-            else
-            {
-                txtRut_alumno.Text = "";
-            }
-        }
-
+        
     }
 }

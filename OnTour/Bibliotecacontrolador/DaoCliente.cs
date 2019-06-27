@@ -93,5 +93,20 @@ namespace Bibliotecacontrolador
             }
             return false;
         }
+
+        public List<Cliente> FiltroRut(string rut)
+        {
+            List<Cliente> cl = clientes.Where(x => x.RutApoderado == rut).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por tipo de empresa
+        public List<Cliente> FiltroEmp(Comuna com)
+        {
+            List<Cliente> cl = clientes.Where(x => x._Comuna == com).
+                ToList();
+            return cl;
+        }
     }
 }

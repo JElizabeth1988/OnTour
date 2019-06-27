@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
-
+using Bibliotecacontrolador;
 namespace Vista
 {
     /// <summary>
@@ -30,19 +30,28 @@ namespace Vista
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (txtUsuario.Text == "admin" && pbContrasenia.Password == "admin")
+            try
             {
-                await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Bienvenido!"));
-                MainWindow _ver = new MainWindow();
-                this.Close();
-                _ver.ShowDialog();
+                if (txtUsuario.Text == "admin" && pbContrasenia.Password == "admin")
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                         string.Format("Bienvenido!"));
+                    MainWindow _ver = new MainWindow();
+                    this.Close();
+                    _ver.ShowDialog();
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                                         string.Format("Datos Inorrectos!"));
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await this.ShowMessageAsync("Mensaje:",
-                                     string.Format("Datos Inorrectos!"));
+
+                Logger.Mensaje(ex.Message);
             }
+            
         }
     }
 }

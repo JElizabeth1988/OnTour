@@ -1,0 +1,53 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vista"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Vista.wpfMantenedorContrato"
+        mc:Ignorable="d"
+        Title="Mantenedor de Contratos" Height="578.124" Width="855.095"  WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png" >
+    <Grid>
+
+        <Grid Background="#FFAFF7F7" Margin="0,0,-0.333,0.333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="71*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="image" HorizontalAlignment="Left" Height="289" Margin="176,215,0,0" VerticalAlignment="Top" Width="497" Source="Imagenes/logo_ontour1.png" Grid.ColumnSpan="2"/>
+            <Grid Height="166" VerticalAlignment="Top" Background="#FF9FC5F8" HorizontalAlignment="Left" Width="879" Grid.ColumnSpan="2" Margin="0,0,-24.333,0">
+                <mah:Tile x:Name="Tile_Click_3" Margin="463,17,277,25" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_3_Click" >
+                    <Grid Height="94" Width="130">
+                        <Image x:Name="image2" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Bullets.png" RenderTransformOrigin="0.558,0.584"/>
+                        <Label x:Name="label3" Content="Listado" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="38,67,-12,0" Height="27" Width="104"/>
+                    </Grid>
+                </mah:Tile>
+                <mah:Tile x:Name="Tile_Click_4" Margin="645,22,101,20" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_4_Click" >
+                    <Grid Height="94" Width="130">
+                        <Image x:Name="image3" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Garbage.png" RenderTransformOrigin="0.558,0.584"/>
+                        <Label x:Name="label4" Content="Eliminar Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="10,67,0,0" Height="27" Width="120"/>
+                    </Grid>
+                </mah:Tile>
+            </Grid>
+
+            <mah:Tile x:Name="Tile_Click_1" Margin="52,34,417.333,419.667" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_1_Click" >
+                <Grid Height="94" Width="130">
+                    <Image x:Name="image4" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Add-New.png" RenderTransformOrigin="0.558,0.584"/>
+                    <Label x:Name="label2" Content="Agregar Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="7,67,0,0" Height="27" Width="117"/>
+                </Grid>
+            </mah:Tile>
+            <mah:Tile x:Name="Tile_Click_2" Margin="246,34,214.333,403.667" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click" >
+                <Grid Height="109" Width="130">
+                    <Image x:Name="image1" HorizontalAlignment="Left" Height="52" Margin="45,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Data-Edit.png" RenderTransformOrigin="0.558,0.584"/>
+                    <Label x:Name="label1" Content="Actualizar Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="4,67,0,0" Height="27" Width="120"/>
+                </Grid>
+            </mah:Tile>
+        </Grid>
+
+    </Grid>
+</Controls:MetroWindow>

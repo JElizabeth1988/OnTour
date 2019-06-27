@@ -67,3 +67,9 @@ C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfModific
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\Vista.g.resources
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfListarCliente.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfListarCliente.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarCliente.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarCliente.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfMantenedorContrato.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfMantenedorContrato.baml

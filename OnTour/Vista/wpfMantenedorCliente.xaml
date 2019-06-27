@@ -11,18 +11,22 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Vista.wpfMantenedorCliente"
         mc:Ignorable="d"        
         
-        Title="Mantenedor de Clientes" Height="466.124" Width="729.095"  WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png" >
-    <Grid Background="#FFAFF7F7">
+        Title="Mantenedor de Clientes" Height="578.124" Width="855.095"  WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png" >
+    <Grid Background="#FFAFF7F7" Margin="0,0,-5,-21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="201" Margin="189,182,0,0" VerticalAlignment="Top" Width="343" Source="Imagenes/logo_ontour1.png"/>
-        <Grid Height="136" VerticalAlignment="Top" Background="#FF9FC5F8" HorizontalAlignment="Left" Width="746" Margin="0,0,-22,0">
-            <mah:Tile x:Name="Tile_Click_3" Margin="385,26,229,16" Height="Auto" Width="Auto" Background="#FF9FC5F8" >
+        <Image x:Name="image" HorizontalAlignment="Left" Height="289" Margin="198,215,0,0" VerticalAlignment="Top" Width="497" Source="Imagenes/logo_ontour1.png" Grid.ColumnSpan="2"/>
+        <Grid Height="166" VerticalAlignment="Top" Background="#FF9FC5F8" HorizontalAlignment="Left" Width="879" Grid.ColumnSpan="2" Margin="0,0,-24.333,0">
+            <mah:Tile x:Name="Tile_Click_3" Margin="463,23,277,19" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_3_Click" >
                 <Grid Height="94" Width="130">
                     <Image x:Name="image2" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Bullets.png" RenderTransformOrigin="0.558,0.584"/>
                     <Label x:Name="label3" Content="Listado" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="38,67,-12,0" Height="27" Width="104"/>
                 </Grid>
             </mah:Tile>
-            <mah:Tile x:Name="Tile_Click_4" Margin="549,26,65,16" Height="Auto" Width="Auto" Background="#FF9FC5F8" >
+            <mah:Tile x:Name="Tile_Click_4" Margin="645,26,101,16" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_4_Click" >
                 <Grid Height="94" Width="130">
                     <Image x:Name="image3" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Garbage.png" RenderTransformOrigin="0.558,0.584"/>
                     <Label x:Name="label4" Content="Eliminar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="10,67,0,0" Height="27" Width="104"/>
@@ -30,14 +34,14 @@
             </mah:Tile>
         </Grid>
 
-        <Controls:Tile x:Name="Tile_Click_1" Margin="52,25,562,319" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_1_Click" >
+        <Controls:Tile x:Name="Tile_Click_1" Margin="52,31,416.667,431" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_1_Click" >
             <Grid Height="94" Width="130">
                 <Image x:Name="image4" HorizontalAlignment="Left" Height="52" Margin="41,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Add-New.png" RenderTransformOrigin="0.558,0.584"/>
-                <Label x:Name="label2" Content="Agregar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="10,67,0,0" Height="27" Width="104"/>
+                <Label x:Name="label2" Content="Agregar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="13,67,0,0" Height="27" Width="104"/>
             </Grid>
         </Controls:Tile>
-        <mah:Tile x:Name="Tile_Click_2" Margin="221,25,393,319" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click" >
-            <Grid Height="94" Width="130">
+        <mah:Tile x:Name="Tile_Click_2" Margin="251,34,219.667,428" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click" >
+            <Grid Height="109" Width="130">
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="52" Margin="45,10,0,0" VerticalAlignment="Top" Width="48" Source="Imagenes/Data-Edit.png" RenderTransformOrigin="0.558,0.584"/>
                 <Label x:Name="label1" Content="Actualizar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="10,67,0,0" Height="27" Width="110"/>
             </Grid>
