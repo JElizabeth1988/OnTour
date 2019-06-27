@@ -76,6 +76,12 @@
     <Compile Include="wpfEliminarCliente.xaml.cs">
       <DependentUpon>wpfEliminarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wpfEliminarContrato.xaml.cs">
+      <DependentUpon>wpfEliminarContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfListadoContrato.xaml.cs">
+      <DependentUpon>wpfListadoContrato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wpfListarCliente.xaml.cs">
       <DependentUpon>wpfListarCliente.xaml</DependentUpon>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <Compile Include="wpfModificarCliente.xaml.cs">
       <DependentUpon>wpfModificarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfModificarContrato.xaml.cs">
+      <DependentUpon>wpfModificarContrato.xaml</DependentUpon>
     </Compile>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
@@ -119,6 +128,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="wpfEliminarContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfListadoContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="wpfListarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +151,10 @@
     <Page Include="wpfModificarCliente.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="wpfModificarContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

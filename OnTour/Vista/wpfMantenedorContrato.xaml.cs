@@ -38,17 +38,20 @@ namespace Vista
 
         private void Tile_Click_2_Click(object sender, RoutedEventArgs e)
         {
-
+            wpfModificarContrato mo = new wpfModificarContrato();
+            mo.Show();
         }
 
         private void Tile_Click_3_Click(object sender, RoutedEventArgs e)
         {
-
+            wpfListadoContrato li = new wpfListadoContrato();
+            li.Show();
         }
 
         private void Tile_Click_4_Click(object sender, RoutedEventArgs e)
         {
-
+            wpfEliminarContrato eli = new wpfEliminarContrato();
+            eli.Show();
         }
     }
 }

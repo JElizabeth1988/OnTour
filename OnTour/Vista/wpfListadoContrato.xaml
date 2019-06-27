@@ -1,0 +1,35 @@
+﻿<Controls:MetroWindow x:Class="Vista.wpfListadoContrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vista"
+         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Listado de Contratos" Height="579.732" Width="677.838" WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="553" VerticalAlignment="Top" Width="686" Margin="-2,-2,-11.333,0" Background="#FFAFF7F7">
+
+
+            <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="510,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Height="250" Margin="31,207,0,0" VerticalAlignment="Top" Width="622" FontWeight="Bold"/>
+            <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="108,27,0,0" VerticalAlignment="Top" Height="152" Width="476">
+                <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,0" VerticalAlignment="Top" Width="426">
+                    <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,9,0,0"/>
+                    <Label x:Name="label1" Content="Número" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="112,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Bold" Controls:TextBoxHelper.ClearTextButton="True"/>
+                    <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="319,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                    <Button x:Name="btnFiltrarnum" Content="Filtrar" HorizontalAlignment="Left" Margin="319,58,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                    <TextBox x:Name="txtFiltroNum"  Controls:TextBoxHelper.Watermark="Número Contrato" HorizontalAlignment="Left" Height="23" Margin="112,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Bold" Controls:TextBoxHelper.ClearTextButton="True"/>
+                </Grid>
+            </GroupBox>
+            <Button x:Name="btnRefrescar" Content="Refrescar" HorizontalAlignment="Left" Margin="108,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnRefresh_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+
+
+
+        </Grid>
+
+    </Grid>
+</Controls:MetroWindow>

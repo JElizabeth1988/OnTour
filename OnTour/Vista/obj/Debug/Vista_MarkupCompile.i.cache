@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\App.xaml
-9-1268167171
+12-1415808611
 
-171334819727
+20-291576979
 18450056126
-Login.xaml;MainWindow.xaml;wpfAgregarCliente.xaml;wpfAgregarContrato.xaml;wpfEliminarCliente.xaml;wpfListarCliente.xaml;wpfMantenedorCliente.xaml;wpfMantenedorContrato.xaml;wpfModificarCliente.xaml;
+Login.xaml;MainWindow.xaml;wpfAgregarCliente.xaml;wpfAgregarContrato.xaml;wpfEliminarCliente.xaml;wpfEliminarContrato.xaml;wpfListadoContrato.xaml;wpfListarCliente.xaml;wpfMantenedorCliente.xaml;wpfMantenedorContrato.xaml;wpfModificarCliente.xaml;wpfModificarContrato.xaml;
 
-True
+False
 

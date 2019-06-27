@@ -22,15 +22,14 @@ using Bibliotecacontrolador;
 namespace Vista
 {
     /// <summary>
-    /// Lógica de interacción para wpfAgregarContrato.xaml
+    /// Lógica de interacción para wpfModificarContrato.xaml
     /// </summary>
-    public partial class wpfAgregarContrato : MetroWindow
+    public partial class wpfModificarContrato : MetroWindow
     {
         DaoContrato dao;
-        public wpfAgregarContrato()
+        public wpfModificarContrato()
         {
             InitializeComponent();
-
             //llenar el combo box con los datos del enumerador
             cboActividad.ItemsSource = Enum.GetValues(typeof
                 (Actividad));
@@ -50,38 +49,57 @@ namespace Vista
             cboDestino.SelectedIndex = 0;
             cboActividad.SelectedIndex = 0;
 
-            txtNumContrato.Text = DateTime.Now.ToString("yyyyMMddHHmmss");
-
             dao = new DaoContrato();
+
         }
 
-        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscarCont_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Cliente c = new DaoCliente().
-                    BuscarCliente(txtRut.Text);
+                Contrato c = new DaoContrato().
+                    Buscar(txtNumContrato.Text);
                 if (c != null)
                 {
+                    txtNumContrato.Text = c.NumeroContrato;
+                    txtRut.Text = c.RutCliente;
+                    txtNombre.Text = c.Nombre;
+                    dpFecha.Text = c.Fecha;
+                    cboActividad.Text = c.act.ToString();
+                    cboDestino.Text = c.dest.ToString();
+                    cboServicio.Text = c.serv.ToString();
+                    txtValorSer.Text = c.ValorServicio.ToString();
+                    txtValorAct.Text = c.ValorActividad.ToString();
+                    txtTotal.Text = c.ValorTotal.ToString();
+                    if (c.seguros == "Si")
+                    {
+                        rbsi.IsChecked = true;
+                        rbNo.IsChecked = false;
+                    }
 
-                    txtRut.Text = c.RutApoderado;
-                    txtNombre.Text = c.Nombre + " " + c.ApPaternoApod;
-                    
+                    if (c.seguros == "No")
+                    {
+                        rbNo.IsChecked = true;
+                        rbsi.IsChecked = false;
+                    }
+                    txtRut.IsEnabled = false;
+                    txtNumContrato.IsEnabled = false;
 
                 }
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Cliente no encontrado"));
-                    /*MessageBox.Show("Cliente no Encontrado");*/
+                      string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
                 }
             }
             catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error al Buscar"));
-                /*MessageBox.Show("Error al buscar");*/
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
                 Logger.Mensaje(ex.Message);
+
 
             }
         }
@@ -106,46 +124,72 @@ namespace Vista
 
         }
 
-
-        //METODO CALCULO
-        public int calculo()
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
-            int valorc = int.Parse(txtValorAct.Text)
-            + int.Parse(txtValorSer.Text);
-
-
-            return valorc;
+            Close();
         }
 
-
-        //BOTON CALCULO CONTRATO
-
-        private async void btnCalc_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                Contrato c = new DaoContrato().
+                    BuscarRut(txtRut.Text);
+                if (c != null)
+                {
+                    txtNumContrato.Text = c.NumeroContrato;
+                    txtRut.Text= c.RutCliente;
+                    txtNombre.Text = c.Nombre;
+                    dpFecha.Text = c.Fecha;
+                    cboActividad.Text = c.act.ToString();
+                    cboDestino.Text = c.dest.ToString();
+                    cboServicio.Text = c.serv.ToString();
+                    txtValorSer.Text = c.ValorServicio.ToString();
+                    txtValorAct.Text = c.ValorActividad.ToString();
+                    txtTotal.Text = c.ValorTotal.ToString();
+                    if (c.seguros == "Si")
+                    {
+                        rbsi.IsChecked = true;
+                        rbNo.IsChecked = false;
+                    }
 
-                txtTotal.Text = calculo().ToString();
+                    if (c.seguros == "No")
+                    {
+                        rbNo.IsChecked = true;
+                        rbsi.IsChecked = false;
+                    }
+                    txtRut.IsEnabled = false;
+                    txtNumContrato.IsEnabled = false;
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
+                }
             }
             catch (Exception ex)
             {
-
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Debe ingresar valor de asistentes"));
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
                 Logger.Mensaje(ex.Message);
-            }
 
+
+            }
         }
+
 
         private async void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 string numero = txtNumContrato.Text;
-                string rut=txtRut.Text;
-                string nombre=  txtNombre.Text;
-                string fecha= dpFecha.Text ;
+                string rut = txtRut.Text;
+                string nombre = txtNombre.Text;
+                string fecha = dpFecha.Text;
                 Actividad acti = (Actividad)cboActividad.SelectedItem;
                 Destino des = (Destino)cboDestino.SelectedItem;
                 Servicio serv = (Servicio)cboServicio.SelectedItem;
@@ -189,21 +233,21 @@ namespace Vista
                 }
                 Contrato c = new Contrato()
                 {
-                    NumeroContrato= numero,
-                    RutCliente=rut,
-                    Nombre=nombre,
-                    Fecha= fecha,
+                    NumeroContrato = numero,
+                    RutCliente = rut,
+                    Nombre = nombre,
+                    Fecha = fecha,
                     act = acti,
                     dest = des,
-                    serv=serv,
-                    ValorServicio=ValorServ,
-                    ValorActividad= ValorAct,
-                    ValorTotal=calculo(),
-                    seguros=seguro
-                
+                    serv = serv,
+                    ValorServicio = ValorServ,
+                    ValorActividad = ValorAct,
+                    ValorTotal = calculo(),
+                    seguros = seguro
+
 
                 };
-                bool resp = dao.Agregar(c);
+                bool resp = dao.Modificar(c);
                 await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Guardado" : "No Guardado"));
                 /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
@@ -222,42 +266,38 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
 
             }
+
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        //METODO CALCULO
+        public int calculo()
         {
-            Close();
+
+            int valorc = int.Parse(txtValorAct.Text)
+            + int.Parse(txtValorSer.Text);
+
+
+            return valorc;
         }
 
-        
-        public async void Buscar()
+
+        //BOTON CALCULO CONTRATO
+
+        private async void btnCalc_Click(object sender, RoutedEventArgs e)
         {
             try
             {
 
-                Cliente c = new DaoCliente().BuscarCliente(txtRut.Text);
-                if (c != null)
-                {
-                    //txtRut.Text = c.RutApoderado;
-                    txtNombre.Text = c.Nombre + " " + c.ApPaternoApod;
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Cliente no encontrado"));
-                    /*MessageBox.Show("Cliente no Encontrado");*/
-                }
+                txtTotal.Text = calculo().ToString();
             }
             catch (Exception ex)
             {
+
                 await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error al Buscar"));
-                /*MessageBox.Show("Error al buscar");*/
+                     string.Format("Debe ingresar valor de asistentes"));
                 Logger.Mensaje(ex.Message);
-
             }
+
         }
-
-
     }
 }

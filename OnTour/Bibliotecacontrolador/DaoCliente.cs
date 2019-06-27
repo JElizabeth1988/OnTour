@@ -108,5 +108,17 @@ namespace Bibliotecacontrolador
                 ToList();
             return cl;
         }
+
+        public Cliente BuscarCliente(string rut)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.RutApoderado.Equals(rut))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
     }
 }

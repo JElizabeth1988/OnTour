@@ -27,10 +27,32 @@ namespace Vista
     public partial class wpfModificarCliente : MetroWindow
     {
         wpfMantenedorCliente mc = new wpfMantenedorCliente();
-        DaoCliente dao = new DaoCliente();
+        DaoCliente dao;
         public wpfModificarCliente()
         {
             InitializeComponent();
+
+            //llenar el combo box con los datos del enumerador
+            cboComuna.ItemsSource = Enum.GetValues(typeof
+                (Comuna));
+            this.cboComuna.SelectedItem = null;
+
+            //llenar el combo box con los datos del enumerador
+            cboCurso.ItemsSource = Enum.GetValues(typeof
+                (Curso));
+            this.cboCurso.SelectedItem = null;
+
+            //llenar el combo box con los datos del enumerador
+            cboCursoLetra.ItemsSource = Enum.GetValues(typeof
+                (Letra));
+            this.cboCursoLetra.SelectedItem = null;
+
+            cboComuna.SelectedIndex = 0;
+            cboCurso.SelectedIndex = 0;
+            cboCursoLetra.SelectedIndex = 0;
+
+
+            dao = new DaoCliente();
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)

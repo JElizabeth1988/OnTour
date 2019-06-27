@@ -73,3 +73,11 @@ C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfElimina
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarCliente.baml
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfMantenedorContrato.g.cs
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfMantenedorContrato.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfAgregarContrato.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfAgregarContrato.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfListadoContrato.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfListadoContrato.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfModificarContrato.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfModificarContrato.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarContrato.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarContrato.baml

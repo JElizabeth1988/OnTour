@@ -1,29 +1,22 @@
-﻿<Controls:MetroWindow x:Class="Vista.wpfAgregarContrato"
+﻿<Controls:MetroWindow x:Class="Vista.wpfModificarContrato"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vista"
-        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+            xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
          xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-    
         mc:Ignorable="d"
-        Title="Agregar Contrato" Height="580.399" Width="609.356" WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png">
+        Title="Modificar Contrato" Height="580.399" Width="609.356" WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-13,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="617" Grid.RowSpan="4">
+        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-13,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="617">
             <Label x:Name="label" Content="Rut Cliente:" HorizontalAlignment="Left" Margin="42,68,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Nombre Cliente:" HorizontalAlignment="Left" Margin="42,106,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy4" Content="Valor Servicio:" HorizontalAlignment="Left" Margin="42,228,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy6" Content="Actividad:" HorizontalAlignment="Left" Margin="42,272,0,0" VerticalAlignment="Top" Height="33" Width="58"/>
 
-            <TextBox x:Name="txtNumContrato" HorizontalAlignment="Left"  Height="8" Margin="187,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
+            <TextBox x:Name="txtNumContrato" HorizontalAlignment="Left"  Height="8" Margin="187,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtRut" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Rut" Height="8" Margin="187,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True"/>
 
             <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre" Height="8" Margin="187,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
@@ -34,7 +27,7 @@
             <RadioButton x:Name="rbsi" Content="Si" HorizontalAlignment="Left" Margin="187,408,0,0" VerticalAlignment="Top" IsChecked="True"/>
             <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="259,408,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txtTotal" HorizontalAlignment="Left" Height="8" Margin="426,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
-            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="259,482,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnGuardar" Content="Actualizar" HorizontalAlignment="Left" Margin="259,482,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="426,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="390,69,0,0" VerticalAlignment="Top" Width="59" Cursor="Arrow" FontWeight="Normal" Click="btnBuscar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="93,482,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
@@ -54,6 +47,7 @@
             <TextBox x:Name="txtValorAct" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Valor" Height="8" Margin="187,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <Label x:Name="label_Copy3" Content="Valor Actividad:" HorizontalAlignment="Left" Margin="42,314,0,0" VerticalAlignment="Top"/>
             <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="456,305,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCalc_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnBuscarCont" Content="Buscar" HorizontalAlignment="Left" Margin="390,30,0,0" VerticalAlignment="Top" Width="59" Cursor="Arrow" FontWeight="Normal" Click="btnBuscarCont_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
         </Grid>
 
