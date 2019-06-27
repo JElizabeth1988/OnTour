@@ -18,7 +18,7 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="247" Margin="410,266,0,0" VerticalAlignment="Top" Width="481" Source="Imagenes/logo_ontour1.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="247" Margin="426,340,0,0" VerticalAlignment="Top" Width="481" Source="Imagenes/logo_ontour1.png"/>
         <Grid HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="1304" Background="#FF9FC5F8">
             <Image x:Name="image1" HorizontalAlignment="Left" Height="61" Margin="467,91,0,0" VerticalAlignment="Top" Width="324" Source="Imagenes/TextArt_190611234427.png"/>
             <Controls:Tile x:Name="Tile_Click_2" Margin="1012,21,60,94" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click">
@@ -28,7 +28,7 @@
                 </Grid>
             </Controls:Tile>
         </Grid>
-        <Controls:Tile x:Name="Tile_Click_3" Background="#FFAFF7F7" Click="Tile_Click_3_Click" Margin="1028,305,91,248" Height="Auto" Width="Auto">
+        <Controls:Tile x:Name="Tile_Click_3" Background="#FFAFF7F7" Click="Tile_Click_3_Click" Margin="1028,281,91,272" Height="Auto" Width="Auto">
             <Grid Height="146" Width="175">
                 <Image x:Name="image4" HorizontalAlignment="Left" Height="73" Margin="45,10,0,0" VerticalAlignment="Top" Width="71" Source="Imagenes/reanudar.png" RenderTransformOrigin="0.558,0.584"/>
                 <Label x:Name="label2" Content="Administrar Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="2,90,0,0"/>
@@ -37,7 +37,7 @@
 
         <Image x:Name="image2" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="57" Source="Imagenes/Business-Man02.png" Margin="916,26,0,0"/>
         <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="967,39,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Height="29" Width="57"/>
-        <Controls:Tile x:Name="Tile_Click_4" Background="#FFAFF7F7" Click="Tile_Click_4_Click" Margin="115,307,1005,256" Height="Auto" Width="Auto">
+        <Controls:Tile x:Name="Tile_Click_4" Background="#FFAFF7F7" Click="Tile_Click_4_Click" Margin="130,286,990,277" Height="Auto" Width="Auto">
             <Grid Height="136" Width="174">
                 <Image x:Name="image5" HorizontalAlignment="Left" Height="75" Margin="45,4,0,0" VerticalAlignment="Top" Width="72" Source="Imagenes/red.png" RenderTransformOrigin="0.558,0.584"/>
                 <Label x:Name="label1" Content="Administrar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="8,84,0,0"/>

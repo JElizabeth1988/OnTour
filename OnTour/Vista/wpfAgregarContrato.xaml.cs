@@ -89,6 +89,7 @@ namespace Vista
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtNumContrato.Clear();
+            txtNumContrato.Text = DateTime.Now.ToString("yyyyMMddHHmmss");
             txtRut.Clear();
             txtNombre.Clear();
             dpFecha.SelectedDate = null;

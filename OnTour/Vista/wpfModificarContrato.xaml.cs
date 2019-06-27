@@ -107,7 +107,9 @@ namespace Vista
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtNumContrato.Clear();
+            txtNumContrato.IsEnabled = true;
             txtRut.Clear();
+            txtNumContrato.IsEnabled = true;
             txtNombre.Clear();
             dpFecha.SelectedDate = null;
             cboActividad.SelectedIndex = 0;
