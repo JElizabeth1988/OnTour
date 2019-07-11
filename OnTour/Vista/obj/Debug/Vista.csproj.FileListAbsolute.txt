@@ -81,3 +81,9 @@ C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfModific
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfModificarContrato.baml
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarContrato.g.cs
 C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\wpfEliminarContrato.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\WpfCorreo.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\WpfCorreo.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\Imagenes\WpfAportes.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\Imagenes\WpfAportes.baml
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\WpfAportes.g.cs
+C:\Users\yobit\Desktop\duplicado OnTour\OnTour\OnTour\Vista\obj\Debug\WpfAportes.baml

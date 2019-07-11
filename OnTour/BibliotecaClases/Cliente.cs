@@ -58,8 +58,8 @@ namespace BibliotecaClases
 
         public string ApMaternoApod
         {
-            get { return _apPaternoApod; }
-            set { _apPaternoApod = value; }
+            get { return _apMaternoApod; }
+            set { _apMaternoApod = value; }
         }
 
         private string _email;

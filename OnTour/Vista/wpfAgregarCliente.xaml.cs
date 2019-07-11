@@ -61,7 +61,7 @@ namespace Vista
             txtRut.IsEnabled = true;
             txtApMaterno.Clear();
             txtNombre.Clear();
-            txtApPaterno.Clear();
+            txtpater.Clear();
             txtEmail.Clear();
             txtDireccion.Clear();
             txtTelefono.Clear();
@@ -87,7 +87,7 @@ namespace Vista
             {
                 String rut = txtRut.Text;
                 String nombre = txtNombre.Text;
-                String ApPaterno = txtApPaterno.Text;
+                String Apater = txtpater.Text;
                 String ApMaterno = txtApMaterno.Text;
                 String mail = txtEmail.Text;
                 String direccion = txtDireccion.Text;
@@ -126,7 +126,7 @@ namespace Vista
                 {
                     RutApoderado = rut,
                     Nombre = nombre,
-                    ApPaternoApod=ApPaterno,
+                    ApPaternoApod=Apater,
                     ApMaternoApod=ApMaterno,
                     Email = mail,
                     Direccion = direccion,
@@ -177,7 +177,7 @@ namespace Vista
                 {
                     txtRut.Text = c.RutApoderado;
                     txtNombre.Text = c.Nombre;
-                    txtApPaterno.Text = c.ApPaternoApod;
+                    txtpater.Text = c.ApPaternoApod;
                     txtApMaterno.Text = c.ApMaternoApod;
                     txtEmail.Text = c.Email;
                     txtDireccion.Text = c.Direccion;

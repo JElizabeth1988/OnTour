@@ -10,7 +10,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
                       
-        Title="OnTour"  Height="719" Width="1301.334"  WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png" WindowState="Maximized">
+        Title="OnTour"  Height="650" Width="1180"  WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png" >
     <Grid Background="#FFAFF7F7" Margin="0,0,-8,-18.333">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -18,29 +18,41 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="247" Margin="426,340,0,0" VerticalAlignment="Top" Width="481" Source="Imagenes/logo_ontour1.png"/>
-        <Grid HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="1304" Background="#FF9FC5F8">
-            <Image x:Name="image1" HorizontalAlignment="Left" Height="61" Margin="467,91,0,0" VerticalAlignment="Top" Width="324" Source="Imagenes/TextArt_190611234427.png"/>
-            <Controls:Tile x:Name="Tile_Click_2" Margin="1012,21,60,94" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="247" Margin="350,246,0,0" VerticalAlignment="Top" Width="481" Source="Imagenes/logo_ontour1.png"/>
+        <Grid HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="1183" Background="#FF9FC5F8" Grid.ColumnSpan="4" Margin="0,0,-0.333,0">
+            <Image x:Name="image1" HorizontalAlignment="Left" Height="61" Margin="437,81,0,0" VerticalAlignment="Top" Width="324" Source="Imagenes/TextArt_190611234427.png"/>
+            <Controls:Tile x:Name="Tile_Click_2" Margin="981,21,60,94" Height="Auto" Width="Auto" Background="#FF9FC5F8" Click="Tile_Click_2_Click">
                 <Grid Height="44" Width="135">
                     <Image x:Name="image3" HorizontalAlignment="Left" Height="51" Margin="-8,-4,0,-3" VerticalAlignment="Top" Width="62" Source="Imagenes/Media-Start.png"/>
                     <Label x:Name="label_Copy" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="34,9,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667"/>
                 </Grid>
             </Controls:Tile>
         </Grid>
-        <Controls:Tile x:Name="Tile_Click_3" Background="#FFAFF7F7" Click="Tile_Click_3_Click" Margin="1028,281,91,272" Height="Auto" Width="Auto">
+        <Controls:Tile x:Name="Tile_Click_3" Background="#FFAFF7F7" Click="Tile_Click_3_Click" Margin="907,259,102.667,254.333" Height="Auto" Width="Auto">
             <Grid Height="146" Width="175">
                 <Image x:Name="image4" HorizontalAlignment="Left" Height="73" Margin="45,10,0,0" VerticalAlignment="Top" Width="71" Source="Imagenes/reanudar.png" RenderTransformOrigin="0.558,0.584"/>
                 <Label x:Name="label2" Content="Administrar Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="2,90,0,0"/>
             </Grid>
         </Controls:Tile>
 
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="57" Source="Imagenes/Business-Man02.png" Margin="916,26,0,0"/>
-        <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="967,39,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Height="29" Width="57"/>
-        <Controls:Tile x:Name="Tile_Click_4" Background="#FFAFF7F7" Click="Tile_Click_4_Click" Margin="130,286,990,277" Height="Auto" Width="Auto">
-            <Grid Height="136" Width="174">
-                <Image x:Name="image5" HorizontalAlignment="Left" Height="75" Margin="45,4,0,0" VerticalAlignment="Top" Width="72" Source="Imagenes/red.png" RenderTransformOrigin="0.558,0.584"/>
-                <Label x:Name="label1" Content="Administrar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="8,84,0,0"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="57" Source="Imagenes/Business-Man02.png" Margin="850,20,0,0"/>
+        <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="899,31,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Height="29" Width="57"/>
+        <Controls:Tile x:Name="Tile_Click_4" Background="#FFAFF7F7" Click="Tile_Click_4_Click" Margin="85,246,917.667,255.333" Height="Auto" Width="Auto">
+            <Grid Height="115" Width="170">
+                <Image x:Name="image5" HorizontalAlignment="Left" Height="75" Margin="45,4,0,0" VerticalAlignment="Top" Width="72" Source="Imagenes/comunidad.png" RenderTransformOrigin="0.558,0.584"/>
+                <Label x:Name="label1" Content="Administrar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="8,84,0,0" Width="152"/>
+            </Grid>
+        </Controls:Tile>
+        <Controls:Tile x:Name="Tile_Aporte" Background="#FFAFF7F7" Click="Tile_Click_5" Margin="145,442,857.667,60.333" Height="Auto" Width="Auto">
+            <Grid Height="115" Width="170">
+                <Image x:Name="image6" HorizontalAlignment="Left" Height="75" Margin="45,4,0,0" VerticalAlignment="Top" Width="72" Source="Imagenes/pago-por-clic.png" RenderTransformOrigin="0.558,0.584"/>
+                <Label x:Name="label3" Content="Registrar Aportes" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="8,84,0,0"/>
+            </Grid>
+        </Controls:Tile>
+        <Controls:Tile x:Name="Tile_correo" Background="{x:Null}" Click="Tile_Click_6" Margin="789,442,213.667,60.333" Height="Auto" Width="Auto">
+            <Grid Height="115" Width="170">
+                <Image x:Name="image7" HorizontalAlignment="Left" Height="75" Margin="45,4,0,0" VerticalAlignment="Top" Width="72" Source="Imagenes/mensajes-de-correo-electronico.png" RenderTransformOrigin="0.558,0.584"/>
+                <Label x:Name="label4" Content="Enviar Correo" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Margin="24,84,0,0"/>
             </Grid>
         </Controls:Tile>
     </Grid>

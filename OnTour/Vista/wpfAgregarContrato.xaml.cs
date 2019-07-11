@@ -65,7 +65,9 @@ namespace Vista
                 {
 
                     txtRut.Text = c.RutApoderado;
-                    txtNombre.Text = c.Nombre + " " + c.ApPaternoApod;
+                    txtNombre.Text = c.Nombre + " " + c.ApPaternoApod+" "+ c.ApMaternoApod;
+                    txtColegio.Text = c.Establecimiento;
+                    txtCurso.Text = c._Curso + " " + c._Letra;
                     
 
                 }
@@ -92,6 +94,8 @@ namespace Vista
             txtNumContrato.Text = DateTime.Now.ToString("yyyyMMddHHmmss");
             txtRut.Clear();
             txtNombre.Clear();
+            txtColegio.Clear();
+            txtCurso.Clear();
             dpFecha.SelectedDate = null;
             cboActividad.SelectedIndex = 0;
             cboDestino.SelectedIndex = 0;
@@ -178,6 +182,9 @@ namespace Vista
                 }
                 int valorc = int.Parse(txtTotal.Text);
 
+                string curso = txtCurso.Text;
+                string colegio = txtColegio.Text;
+
                 string seguro;
                 if (rbsi.IsChecked == true)
                 {
@@ -190,17 +197,19 @@ namespace Vista
                 }
                 Contrato c = new Contrato()
                 {
-                    NumeroContrato= numero,
-                    RutCliente=rut,
-                    Nombre=nombre,
-                    Fecha= fecha,
+                    NumeroContrato = numero,
+                    RutCliente = rut,
+                    Nombre = nombre,
+                    Fecha = fecha,
                     act = acti,
                     dest = des,
-                    serv=serv,
-                    ValorServicio=ValorServ,
-                    ValorActividad= ValorAct,
-                    ValorTotal=calculo(),
-                    seguros=seguro
+                    serv = serv,
+                    ValorServicio = ValorServ,
+                    ValorActividad = ValorAct,
+                    ValorTotal = calculo(),
+                    seguros = seguro,
+                    Curso = curso,
+                    Colegio=colegio
                 
 
                 };

@@ -28,6 +28,8 @@ namespace BibliotecaClases
     {
         public string NumeroContrato { get; set; }
         public string RutCliente { get; set; }
+        public string Colegio { get; set; }
+        public string Curso { get; set; }
         public string Nombre { get; set; }
         public string Fecha { get; set; }
         public int ValorServicio { get; set; }

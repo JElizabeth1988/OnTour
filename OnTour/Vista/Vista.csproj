@@ -67,11 +67,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Imagenes\WpfAportes.xaml.cs">
+      <DependentUpon>WpfAportes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wpfAgregarCliente.xaml.cs">
       <DependentUpon>wpfAgregarCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="wpfAgregarContrato.xaml.cs">
       <DependentUpon>wpfAgregarContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfAportes.xaml.cs">
+      <DependentUpon>WpfAportes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfCorreo.xaml.cs">
+      <DependentUpon>WpfCorreo.xaml</DependentUpon>
     </Compile>
     <Compile Include="wpfEliminarCliente.xaml.cs">
       <DependentUpon>wpfEliminarCliente.xaml</DependentUpon>
@@ -97,6 +106,10 @@
     <Compile Include="wpfModificarContrato.xaml.cs">
       <DependentUpon>wpfModificarContrato.xaml</DependentUpon>
     </Compile>
+    <Page Include="Imagenes\WpfAportes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +134,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="wpfAgregarContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfAportes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfCorreo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,6 +257,13 @@
     <Resource Include="Imagenes\Bullets.png" />
     <Resource Include="Imagenes\Data-Edit.png" />
     <Resource Include="Imagenes\Garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\comunidad.png" />
+    <Resource Include="Imagenes\dinero.png" />
+    <Resource Include="Imagenes\mensajes-de-correo-electronico.png" />
+    <Resource Include="Imagenes\objetivo.png" />
+    <Resource Include="Imagenes\pago-por-clic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

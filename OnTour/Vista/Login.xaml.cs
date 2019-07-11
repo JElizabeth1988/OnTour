@@ -26,6 +26,7 @@ namespace Vista
         public Login()
         {
             InitializeComponent();
+            txtUsuario.Focus();
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)

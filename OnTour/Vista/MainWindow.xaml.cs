@@ -53,7 +53,7 @@ namespace Vista
         private void Tile_Click_4_Click(object sender, RoutedEventArgs e)
         {
             wpfMantenedorCliente mcli = new wpfMantenedorCliente();
-            mcli.Show();
+            mcli.ShowDialog();
             
 
         }
@@ -61,7 +61,19 @@ namespace Vista
         private void Tile_Click_3_Click(object sender, RoutedEventArgs e)
         {
             wpfMantenedorContrato con = new wpfMantenedorContrato();
-            con.Show();
+            con.ShowDialog();
+        }
+
+        private void Tile_Click_6(object sender, RoutedEventArgs e)
+        {
+            WpfCorreo cor = new WpfCorreo();
+            cor.ShowDialog();
+        }
+
+        private void Tile_Click_5(object sender, RoutedEventArgs e)
+        {
+            WpfAportes apo = new WpfAportes();
+            apo.ShowDialog();
         }
     }
 }
