@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Bibliotecacontrolador;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
@@ -31,6 +31,9 @@ namespace Vista
             cboPara.Items.Add("pamela_carrasco@hotmail.com");
             cboPara.Items.Add("kps88765@outlook.com");
             cboPara.Items.Add("hh5p@colegioelprado.cl");
+
+            cboPara.SelectedIndex = 0;
+            txtAsunto.Focus();
 
             btnSalir.Visibility = Visibility.Hidden;
         }
@@ -55,27 +58,38 @@ namespace Vista
 
         private async void btnEnviar_Click(object sender, RoutedEventArgs e)
         {
-            if (cboPara.Text == "" && txtAsunto.Text==""  )
+            try
             {
-                await this.ShowMessageAsync("Mensaje:",
-                                        string.Format("Ingrese campos: Destinatario y Asunto "));
+                if (txtAsunto.Text == "")
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                                            string.Format("Ingrese campos: Destinatario y Asunto "));
+
+
+                }
+
+                else
+                {
+                    var x = await this.ShowProgressAsync("Por Favor Espere... ", "Enviando Correo Electrónico...");
+
+                    await Task.Delay(3000);
+                    btnCancelar.Visibility = Visibility.Hidden;
+                    btnSalir.Visibility = Visibility.Visible;
+
+                    x.SetCancelable(false);
+
+                    await this.ShowMessageAsync("Mensaje:", "Correo ELectrónico Enviado!");
+                    await x.CloseAsync().ConfigureAwait(false);
+
+                }
 
             }
-
-            else
+            catch (Exception ex)
             {
-                var x = await this.ShowProgressAsync("Por Favor Espere... ", "Enviando Correo Electrónico...");
-
-                await Task.Delay(3000);
-                btnCancelar.Visibility = Visibility.Hidden;
-                btnSalir.Visibility = Visibility.Visible;
-
-                x.SetCancelable(false);
-
-                await this.ShowMessageAsync("Mensaje:", "Correo ELectrónico Enviado!");
-                await x.CloseAsync().ConfigureAwait(false);
-                
+                await this.ShowMessageAsync("Error:", "Correo ELectrónico No Enviado!");
+                Logger.Mensaje(ex.Message);
             }
+            
 
             
         }
@@ -86,7 +100,7 @@ namespace Vista
         {
             RichTxt_mensaje.Document.Blocks.Clear();
             txtAsunto.Clear();
-            cboPara.Items.Clear();
+            cboPara.SelectedIndex = 0;
             btnSalir.Visibility = Visibility.Hidden;
             btnCancelar.Visibility = Visibility.Visible;
         }

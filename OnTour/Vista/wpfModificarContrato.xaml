@@ -8,9 +8,12 @@
          xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="Modificar Contrato" Height="580.399" Width="609.356" WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png">
+        Title="Modificar Contrato" Height="580.399" Width="691.356" WindowTitleBrush="Black" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Icon="Imagenes/MapsR.png">
     <Grid>
-        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-13,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="617">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-18,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="704">
             <Label x:Name="label" Content="Rut Cliente:" HorizontalAlignment="Left" Margin="42,68,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Nombre Cliente:" HorizontalAlignment="Left" Margin="42,106,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy4" Content="Valor Servicio:" HorizontalAlignment="Left" Margin="42,228,0,0" VerticalAlignment="Top"/>
@@ -19,7 +22,7 @@
             <TextBox x:Name="txtNumContrato" HorizontalAlignment="Left"  Height="8" Margin="187,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtRut" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Rut" Height="8" Margin="187,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True"/>
 
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre" Height="8" Margin="187,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre" Height="8" Margin="187,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
             <ComboBox x:Name="cboServicio" HorizontalAlignment="Left" Margin="187,186,0,0" VerticalAlignment="Top" Width="165" FontWeight="Normal"/>
             <TextBox x:Name="txtValorSer" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Valor" Height="8" Margin="187,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <ComboBox x:Name="cboActividad" HorizontalAlignment="Left" Margin="187,272,0,0" VerticalAlignment="Top" Width="165" FontWeight="Normal"/>
@@ -48,6 +51,10 @@
             <Label x:Name="label_Copy3" Content="Valor Actividad:" HorizontalAlignment="Left" Margin="42,314,0,0" VerticalAlignment="Top"/>
             <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="456,305,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCalc_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnBuscarCont" Content="Buscar" HorizontalAlignment="Left" Margin="390,30,0,0" VerticalAlignment="Top" Width="59" Cursor="Arrow" FontWeight="Normal" Click="btnBuscarCont_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Label x:Name="label_Copy2" Content="Establecimiento:" HorizontalAlignment="Left" Margin="387,106,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtColegio" HorizontalAlignment="Left" Height="8" Margin="488,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
+            <Label x:Name="label_Copy5" Content="Curso:" HorizontalAlignment="Left" Margin="393,146,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtCurso" HorizontalAlignment="Left" Height="8" Margin="490,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
 
         </Grid>
 

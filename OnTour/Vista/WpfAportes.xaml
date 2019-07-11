@@ -40,8 +40,8 @@
                     <Label x:Name="labelSeguro" Content="" HorizontalAlignment="Left" Margin="423,104,0,0" VerticalAlignment="Top" Width="41"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1" Header="Generar Reporte" HorizontalAlignment="Left" Margin="61,269,0,0" VerticalAlignment="Top" Width="572" Height="172" Controls:ControlsHelper.ContentCharacterCasing="Normal">
-                <Grid HorizontalAlignment="Left" Height="164" Margin="63,10,0,-7.333" VerticalAlignment="Top" Width="427">
+            <GroupBox x:Name="groupBox1" Header="Generar Reporte" HorizontalAlignment="Left" Margin="61,269,0,0" VerticalAlignment="Top" Width="592" Height="172" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+                <Grid HorizontalAlignment="Left" Height="121" Margin="75,4,0,0" VerticalAlignment="Top" Width="427">
                     <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="332,47,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCalc_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
                     <Label x:Name="label_Copy3" Content="Ingresar Aporte:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Height="33" Width="106"/>
                     <TextBox x:Name="txtAporte" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese Aporte"  HorizontalAlignment="Left" Height="23" Margin="137,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>

@@ -42,7 +42,7 @@ namespace BibliotecaClases
         public string serv { get; set; }
 
         //public int apEfectuado { get; set; }
-        //public int aporteNuevo { get; set; }
+        public int aporteNuevo { get; set; }
         public int Saldo { get; set; }
         public Aporte()
         {

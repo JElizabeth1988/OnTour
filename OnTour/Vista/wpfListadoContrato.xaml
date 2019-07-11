@@ -15,14 +15,14 @@
 
             <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="510,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Height="250" Margin="31,207,0,0" VerticalAlignment="Top" Width="622" FontWeight="Bold"/>
-            <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="108,27,0,0" VerticalAlignment="Top" Height="152" Width="476">
+            <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="108,27,0,0" VerticalAlignment="Top" Height="152" Width="476" Controls:ControlsHelper.ContentCharacterCasing="Normal">
                 <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,0" VerticalAlignment="Top" Width="426">
-                    <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,9,0,0"/>
-                    <Label x:Name="label1" Content="Número" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="112,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Bold" Controls:TextBoxHelper.ClearTextButton="True"/>
+                    <Label x:Name="label" Content="Rut:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,9,0,0" Width="44"/>
+                    <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" Width="107"/>
+                    <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="122,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Controls:TextBoxHelper.ClearTextButton="True"/>
                     <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="319,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
                     <Button x:Name="btnFiltrarnum" Content="Filtrar" HorizontalAlignment="Left" Margin="319,58,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-                    <TextBox x:Name="txtFiltroNum"  Controls:TextBoxHelper.Watermark="Número Contrato" HorizontalAlignment="Left" Height="23" Margin="112,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Bold" Controls:TextBoxHelper.ClearTextButton="True"/>
+                    <TextBox x:Name="txtFiltroNum"  Controls:TextBoxHelper.Watermark="Número Contrato" HorizontalAlignment="Left" Height="23" Margin="122,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Controls:TextBoxHelper.ClearTextButton="True"/>
                 </Grid>
             </GroupBox>
             <Button x:Name="btnRefrescar" Content="Refrescar" HorizontalAlignment="Left" Margin="108,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnRefresh_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>

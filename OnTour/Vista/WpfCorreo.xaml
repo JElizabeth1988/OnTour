@@ -17,12 +17,12 @@
 
 
             <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="510,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-            <GroupBox x:Name="gbFiltrar" Header="Crear Correo" HorizontalAlignment="Left" Margin="40,27,0,0" VerticalAlignment="Top" Height="434" Width="607" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <GroupBox x:Name="gbFiltrar" Header="Crear Correo Electrónico" HorizontalAlignment="Left" Margin="40,27,0,0" VerticalAlignment="Top" Height="434" Width="607" Controls:ControlsHelper.ContentCharacterCasing="Normal" FontWeight="Bold">
                 <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,-0.333,0" VerticalAlignment="Top" Width="551">
-                    <Label x:Name="label" Content="Para:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,10,0,0" Width="53" FontWeight="Bold"/>
-                    <Label x:Name="label1" Content="Asunto:" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" Width="55" FontWeight="Bold"/>
-                    <TextBox x:Name="txtAsunto"  Controls:TextBoxHelper.Watermark="Ingrese Asunto" HorizontalAlignment="Left" Height="23" Margin="139,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Controls:TextBoxHelper.ClearTextButton="True"/>
-                    <ComboBox x:Name="cboPara" HorizontalAlignment="Left" Margin="138,8,0,0" VerticalAlignment="Top" Width="295"/>
+                    <Label x:Name="label" Content="Para:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,10,0,0" Width="53" FontWeight="Normal"/>
+                    <Label x:Name="label1" Content="Asunto:" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" Width="55" FontWeight="Normal"/>
+                    <TextBox x:Name="txtAsunto"  Controls:TextBoxHelper.Watermark="Ingrese Asunto" HorizontalAlignment="Left" Height="23" Margin="139,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Controls:TextBoxHelper.ClearTextButton="True" FontWeight="Normal"/>
+                    <ComboBox x:Name="cboPara" HorizontalAlignment="Left" Margin="138,8,0,0" VerticalAlignment="Top" Width="295" FontWeight="Normal"/>
                 </Grid>
             </GroupBox>
             <Button x:Name="btnRefrescar" Content="Limpiar" HorizontalAlignment="Left" Margin="108,482,0,0" VerticalAlignment="Top" Width="74" FontWeight="Normal" Cursor="Arrow" Click="btnRefresh_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>

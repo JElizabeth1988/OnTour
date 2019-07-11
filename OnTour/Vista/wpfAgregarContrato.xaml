@@ -17,7 +17,7 @@
             <RowDefinition Height="0*"/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-95,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="699" Grid.RowSpan="4">
+        <Grid Height="566" VerticalAlignment="Top" Margin="0,0,-15,-13.333" Background="#FFAFF7F7" HorizontalAlignment="Left" Width="713" Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -29,7 +29,7 @@
             <TextBox x:Name="txtNumContrato" HorizontalAlignment="Left"  Height="8" Margin="187,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
             <TextBox x:Name="txtRut" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Rut" Height="8" Margin="187,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal"  Controls:TextBoxHelper.ClearTextButton="True"/>
 
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre" Height="8" Margin="187,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre" Height="8" Margin="187,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
             <ComboBox x:Name="cboServicio" HorizontalAlignment="Left" Margin="187,186,0,0" VerticalAlignment="Top" Width="165" FontWeight="Normal"/>
             <TextBox x:Name="txtValorSer" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Valor" Height="8" Margin="187,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <ComboBox x:Name="cboActividad" HorizontalAlignment="Left" Margin="187,272,0,0" VerticalAlignment="Top" Width="165" FontWeight="Normal"/>
@@ -60,7 +60,7 @@
             <Label x:Name="label_Copy2" Content="Establecimiento:" HorizontalAlignment="Left" Margin="377,106,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txtColegio" HorizontalAlignment="Left" Height="8" Margin="484,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
             <Label x:Name="label_Copy5" Content="Curso:" HorizontalAlignment="Left" Margin="381,146,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtCurso" HorizontalAlignment="Left" Height="8" Margin="488,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
+            <TextBox x:Name="txtCurso" HorizontalAlignment="Left" Height="8" Margin="484,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True" IsEnabled="False"/>
 
         </Grid>
 

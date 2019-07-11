@@ -64,6 +64,8 @@ namespace Vista
                     txtNumContrato.Text = c.NumeroContrato;
                     txtRut.Text = c.RutCliente;
                     txtNombre.Text = c.Nombre;
+                    txtColegio.Text = c.Colegio;
+                    txtCurso.Text = c.Curso;
                     dpFecha.Text = c.Fecha;
                     cboActividad.Text = c.act.ToString();
                     cboDestino.Text = c.dest.ToString();
@@ -110,6 +112,8 @@ namespace Vista
             txtNumContrato.IsEnabled = true;
             txtRut.Clear();
             txtNumContrato.IsEnabled = true;
+            txtCurso.Clear();
+            txtColegio.Clear();
             txtNombre.Clear();
             dpFecha.SelectedDate = null;
             cboActividad.SelectedIndex = 0;
@@ -142,6 +146,8 @@ namespace Vista
                     txtNumContrato.Text = c.NumeroContrato;
                     txtRut.Text= c.RutCliente;
                     txtNombre.Text = c.Nombre;
+                    txtColegio.Text = c.Colegio;
+                    txtCurso.Text = c.Curso;
                     dpFecha.Text = c.Fecha;
                     cboActividad.Text = c.act.ToString();
                     cboDestino.Text = c.dest.ToString();
@@ -192,6 +198,8 @@ namespace Vista
                 string rut = txtRut.Text;
                 string nombre = txtNombre.Text;
                 string fecha = dpFecha.Text;
+                string colegio = txtColegio.Text;
+                string curso = txtCurso.Text;
                 Actividad acti = (Actividad)cboActividad.SelectedItem;
                 Destino des = (Destino)cboDestino.SelectedItem;
                 Servicio serv = (Servicio)cboServicio.SelectedItem;
@@ -238,6 +246,8 @@ namespace Vista
                     NumeroContrato = numero,
                     RutCliente = rut,
                     Nombre = nombre,
+                    Colegio= colegio,
+                    Curso= curso,
                     Fecha = fecha,
                     act = acti,
                     dest = des,

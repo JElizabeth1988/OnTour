@@ -10,7 +10,7 @@
      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 
         mc:Ignorable="d"
-        Title="Login" Height="333.561" Width="297.544" TitleCharacterCasing="Normal" WindowTitleBrush="Black"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="333.561" Width="297.544" TitleCharacterCasing="Normal" WindowTitleBrush="Black"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Imagenes/MapsR.png">
     <Grid Background="#FFAFF7F7">
 
         <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.Watermark="Ingrese Nombre de Usuario" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="23" Margin="42,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>

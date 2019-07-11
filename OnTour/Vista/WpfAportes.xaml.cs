@@ -30,6 +30,7 @@ namespace Vista
         {
             InitializeComponent();
             dao = new DaoAporte();
+            txtRut.Focus();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -93,7 +94,7 @@ namespace Vista
                     dest = des,
                     ValorTotal =total,
                     //apEfectuado = int.Parse(txtAporteEfectuado.Text),
-                   // aporteNuevo = int.Parse(txtAporte.Text),
+                   aporteNuevo = int.Parse(txtAporte.Text),
                     Saldo = saldo
 
                 };
@@ -125,7 +126,7 @@ namespace Vista
             label_Destino.Content = string.Empty;
             labelTotal.Content = string.Empty;
             txtAporte.Clear();
-            //txtAporteEfectuado.Clear();
+            txtAporte.Clear();
             txtSaldo.Clear();
         }
 
